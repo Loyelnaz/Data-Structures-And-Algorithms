@@ -1,4 +1,4 @@
-package Recursion;
+package othertopics.recursion;
 
 /**
     Problem - https://www.codingninjas.com/codestudio/problems/count-ways-to-reach-nth-stairs_798650
