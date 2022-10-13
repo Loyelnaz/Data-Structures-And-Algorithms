@@ -1,4 +1,4 @@
-package datastructures.stack;
+package datastructures.stacks;
 
 /**
  * Problem - https://www.codingninjas.com/codestudio/problems/two-stacks_983634
