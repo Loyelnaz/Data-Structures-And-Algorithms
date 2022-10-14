@@ -1,4 +1,4 @@
-###Stack
+### Stack
 * Termed as LIFO, which stands for <b>Last In, First Out.</b>
 * Add and remove elements from the <b>same end</b>
 * It is an abstract data structure, so it can be implemented with a dynamic array
@@ -10,8 +10,8 @@
 * All the above operations are done in O(1) complexity
 * Searching an item in the stack would take O(n) complexity
 
-####Implementation
+#### Implementation
 * [Stack implementation using custom data structure](StackImpl.java)
 
-####Problems
+#### Problems
 * [Valid Parentheses](ValidParentheses.java)

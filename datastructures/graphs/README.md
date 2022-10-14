@@ -32,3 +32,11 @@ The number of edges that can be used to reach the node is the node's <b>indegree
 * 2D matrix of size n x n
 * If graph[i][j] == 1, that means there is an outgoing edge from node i to node j
 * Ex: [[0,1,0,0],[0,0,1,0],[1,0,0,1],[0,0,0,0]]
+
+#### Traversal Techniques
+* [Breadth First Search](BreadthFirstSearch.java)
+* [Depth First Search](DepthFirstSearch.java)
+
+#### Problems
+* [Number of connected components in an undirected graph](ConnectedComponentsInUndirectedGraph.java)
+* [Check cycle in a graph](CheckCycleInGraph.java)
