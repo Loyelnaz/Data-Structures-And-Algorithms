@@ -9,9 +9,14 @@
   * isEmpty() - return true if and only if the stack is empty
 * All the above operations are done in O(1) complexity
 * Searching an item in the stack would take O(n) complexity
+* Example - UNDO option in many applications. We store the previous state of our work in such a way that last one appears first
+* Other use case:
+  * To backtrack to the previous task/state (Ex: recursion)
+  * To store a partially completed task (Ex: when exploring two different paths on a Graph from a point while calculating the smallest path to the target)
 
 #### Implementation
 * [Stack implementation using custom data structure](StackImpl.java)
+* [Stack implementation using array](StackImplUsingArray.java)
 
 #### Problems
 * [Valid Parentheses](ValidParentheses.java)
