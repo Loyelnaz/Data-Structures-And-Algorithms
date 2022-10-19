@@ -13,11 +13,8 @@ A heap supports the following operations:
 * Remove the min element in O(logn)
 * Find the min element in O(1)
 
-### Min Heap
-* Root node keys must be greater than or equal to their child node keys
-
 ### Max Heap
-* Root node keys are less than or equal to their child node keys
+* Root node keys are greater than or equal to their child node keys
 * Create a heap
   * Initially, all elements are placed in the nodes in the same order as in the array
   * We then start the comparison from bottom-up i.e. last parent node (n/2th element) is compared with its child nodes to check max heap property
@@ -35,6 +32,9 @@ A heap supports the following operations:
   * If the key is smaller than the key at any of the child nodes, swap values
   * If both keys at the children nodes are greater than the parent node key, pick the larger one and see if the heap property is satisfied
   * Repeat until you reach the last level
+
+### Min Heap
+* Root node keys must be less than or equal to their child node keys
 
 ### Heap Implementation
 * The implementation of the tree itself typically uses an array, and the parent-child relationships are done using math with the indices. 
