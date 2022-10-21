@@ -53,4 +53,5 @@ A heap supports the following operations:
 * [Heap](Heap.java)
 
 ### Problems
+* [Find k smallest element from an array](KSmallestElement.java)
 

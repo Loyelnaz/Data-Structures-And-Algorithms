@@ -1,4 +1,4 @@
-package datastructures.hashing;
+package datastructures.hashtable;
 
 import java.util.HashMap;
 
@@ -25,11 +25,11 @@ public class TwoSum {
      */
     public static int[] twoSum(int[] arr, int target) {
         HashMap<Integer, Integer> hashMap = new HashMap();
-        for(int i=0; i < target; i++) {
+        for(int i = 0; i < arr.length; i++) {
             if (hashMap.containsKey(arr[i])) {
                 return new int[] {hashMap.get(arr[i]), i};
             }
-            hashMap.put(target-arr[i], i);
+            hashMap.put(target - arr[i], i);
         }
 
         return new int[] {-1, -1};
