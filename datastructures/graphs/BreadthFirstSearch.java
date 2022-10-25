@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * Graph Traversal technique that ensures all the nodes at a certain level (all adjacent nodes)
+ * are traversed before moving to the next level
+ *
+ * Time complexity:
+ * Adjacency List - O(V+E)
+ * Adjacency Matrix - O(v^2)
+ */
 public class BreadthFirstSearch {
     private ArrayList<Integer> bfsOfGraph(int vertices, ArrayList<ArrayList<Integer>> adjacencyList) {
         ArrayList<Integer> result = new ArrayList<>();
