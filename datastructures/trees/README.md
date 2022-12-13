@@ -9,7 +9,7 @@
 
 #### Leaf Node
 Node having no children
-##### Depth of a tree
+#### Depth of a tree
 Distance from the root node. The root has a depth of zero. Every child has a depth of parentsDepth+1
 
 ### Binary Tree
@@ -42,10 +42,10 @@ public void dfs(Node node) {
 }
 ````
 
-#### Preorder Traversal
+### Preorder Traversal
 * Before moving onto the children node, the logic is worked upon the current node
 * From the below binary tree, the preorder traversal would be -> 1,2,4,5,6,7,3
-* Logic is before the children nodes
+* Root is visited before the children nodes
 
      ![img_3.png](img_3.png)
 ````
@@ -62,7 +62,7 @@ public void preorderDfs(Node node) {
 ### Inorder Traversal
 * First recursively call the left child, then perform logic on the current node, then recursively call the right child
 * The inorder traversal would be -> 4,2,6,5,7,1,3
-* Logic is in between the children nodes
+* Root is visited in between the children nodes
 ````
 public void inorderDfs(Node node) {
     if (node == null) {
@@ -74,10 +74,10 @@ public void inorderDfs(Node node) {
     inorderDfs(node.right);
 }
 ````
-#### Postorder Traversal
+### Postorder Traversal
 * Recursively call on the children first and then perform logic on the current node.
 * The postorder traversal would be -> 4,6,7,5,2,3,1
-* Logic is after the children nodes
+* Root is visited after the children nodes
 ````
 public void postorderDfs(Node node) {
     if (node == null) {
@@ -89,3 +89,10 @@ public void postorderDfs(Node node) {
     System.out.println(node.val);
 }
 ````
+
+### Problems
+* [Path Sum of a binary tree](PathSum.java)
+* [Maximum depth of a binary tree](MaxDepthOfTree.java)
+* [Minimum depth of a binary tree](MinimumDepthOfTree.java)
+* [Right Side View](RightSideView.java)
+* [Lowest Common Ancestor of a Binary Tree](LowestCommonAncestorOfBinaryTree.java)

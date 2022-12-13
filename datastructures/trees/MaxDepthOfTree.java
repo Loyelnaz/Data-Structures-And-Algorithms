@@ -1,5 +1,7 @@
 package datastructures.trees;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -58,4 +60,32 @@ public class MaxDepthOfTree {
 
         return 1 + Math.max(maxDepthOfTree(root.left), maxDepthOfTree(root.right));
     }
+
+    /**
+     * Iterative approach using a queue
+     */
+    public int maxDepthOfTreeUsingQueue(TreeNode root) {
+        if (root == null)
+            return 0;
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        int height = 1;
+
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+
+            while (size-- > 0) {
+                TreeNode current = queue.poll();
+
+                if (current.left != null) queue.add(current.left);
+                if (current.right != null) queue.add(current.right);
+            }
+            height++;
+        }
+
+        return height;
+    }
+
 }

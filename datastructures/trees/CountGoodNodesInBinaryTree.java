@@ -42,4 +42,27 @@ public class CountGoodNodesInBinaryTree {
 
         return goodNodesCount;
     }
+
+    /**
+     * Solution using a recursive approach
+     */
+    public int goodNodesCount(TreeNode root) {
+        return goodNodes(root, 0);
+    }
+
+    private int goodNodes(TreeNode root, int maxSoFar) {
+        if (root == null) {
+            return 0;
+        }
+
+        int left = goodNodes(root.left, Math.max(maxSoFar, root.data));
+        int right = goodNodes(root.right, Math.max(maxSoFar, root.data));
+        int result = left + right;
+
+        if (root.data >= maxSoFar) {
+            result++;
+        }
+
+        return result;
+    }
 }

@@ -16,6 +16,29 @@ public class PathSum {
         }
     }
 
+    public boolean pathSum(TreeNode root, int target) {
+        return pathSum(root, target, 0);
+    }
+
+    public boolean pathSum(TreeNode root, int target, int sum) {
+        if (root == null) {
+            return false;
+        }
+
+        sum = sum + root.data;
+        if (root.left == null && root.right == null) {
+            return (target == sum);
+        }
+
+        boolean result = pathSum(root.left, target, sum);
+        if (!result) {
+            result = pathSum(root.right, target, sum);
+        }
+
+        return result;
+    }
+
+
     /**
      * Iterative approach to path sum from root to leaf node
      *
