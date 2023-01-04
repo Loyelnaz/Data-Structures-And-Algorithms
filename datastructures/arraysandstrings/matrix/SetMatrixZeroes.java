@@ -1,4 +1,4 @@
-package datastructures.arrays.matrix;
+package datastructures.arraysandstrings.matrix;
 
 /**
  * https://leetcode.com/problems/set-matrix-zeroes/

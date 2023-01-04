@@ -1,4 +1,4 @@
-package datastructures.arrays.twopointers;
+package datastructures.arraysandstrings.twopointers;
 
 /**
  * Given two sorted integer arrays, return an array that combines both of them and is also sorted.

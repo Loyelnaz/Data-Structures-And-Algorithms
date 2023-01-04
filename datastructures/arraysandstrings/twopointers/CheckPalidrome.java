@@ -1,4 +1,4 @@
-package datastructures.arrays.twopointers;
+package datastructures.arraysandstrings.twopointers;
 
 /**
  * Return true if a given string is a palindrome, false otherwise.

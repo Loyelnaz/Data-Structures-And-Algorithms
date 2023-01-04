@@ -1,4 +1,4 @@
-package datastructures.arrays.twopointers;
+package datastructures.arraysandstrings.twopointers;
 
 /**
  * https://leetcode.com/problems/squares-of-a-sorted-array/discussion/

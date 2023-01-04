@@ -1,4 +1,4 @@
-package datastructures.arrays.twopointers;
+package datastructures.arraysandstrings.twopointers;
 
 /**
  * Given a sorted array of unique integers and a target integer,

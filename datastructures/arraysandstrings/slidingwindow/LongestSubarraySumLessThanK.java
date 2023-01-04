@@ -1,4 +1,4 @@
-package datastructures.string.slidingwindow;
+package datastructures.arraysandstrings.slidingwindow;
 
 /**
  * Given an array of positive integers nums and an integer k,
@@ -8,7 +8,7 @@ package datastructures.string.slidingwindow;
  * Output - 4 [4, 2, 1, 1]
  */
 public class LongestSubarraySumLessThanK {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int[] nums = {3, 1, 2, 7, 4, 2, 1, 1, 5};
         int k = 8;
 
