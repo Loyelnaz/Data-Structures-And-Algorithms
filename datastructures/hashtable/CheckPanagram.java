@@ -16,13 +16,15 @@ public class CheckPanagram {
         System.out.println(isPanagram(input));
     }
 
+    /**
+     * Time complexity : O(n)
+     * Space complexity : O(1) OR O(m) where m=26
+     */
     public static boolean isPanagram(String sentence) {
         Set<Character> set = new HashSet<>();
 
         for (int i = 0; i < sentence.length(); i++) {
-            if (!set.contains(sentence.charAt(i))) {
-                set.add(sentence.charAt(i));
-            }
+            set.add(sentence.charAt(i));
         }
 
         return set.size() == 26;

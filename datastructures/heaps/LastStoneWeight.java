@@ -29,14 +29,14 @@ public class LastStoneWeight {
         }
 
         while (heap.size() > 1) {
-            int x = heap.poll();
-            int y = heap.poll();
+            int x = heap.remove();
+            int y = heap.remove();
 
             if (x != y) {
                 heap.add(x-y);
             }
         }
 
-        return heap.isEmpty() ? 0 : heap.poll();
+        return heap.isEmpty() ? 0 : heap.remove();
     }
 }

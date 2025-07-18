@@ -29,14 +29,11 @@ public class FibonacciTopDownApproach {
          * the time complexity is O(2^n) as for every nth fibonacci, we make two more calls to the function
          *
          * With DP approach, the complexity comes down to O(n), which avoids duplicate computation
+         * Space complexity - O(n) which involves hashmap space as well as recursion stack space
          */
         public int fibonacci(int n) {
-            if (n == 1) {
-                return 0;
-            }
-
-            if (n == 2) {
-                return 1;
+            if (n <= 1) {
+                return n;
             }
 
             // if the computation is already present in the map, we don't need to calculate it again

@@ -1,6 +1,7 @@
 package datastructures.hashtable;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Given an array of integers nums and an integer target, return indices of two numbers such that they add up to target.
@@ -20,16 +21,21 @@ public class TwoSum {
      *
      * Instead, use hashmap, map index as value to (target-num) as key
      *
-     * Time complexity : O(1)
+     * Time complexity : O(n) as the hash map operation uses O(1)
      * Space complexity : O(n)
      */
     public static int[] twoSum(int[] arr, int target) {
-        HashMap<Integer, Integer> hashMap = new HashMap();
+        // If the question wanted us to return a boolean indicating
+        // if a pair exists or to return the numbers themselves,
+        // then we could just use a set.
+        Map<Integer, Integer> hashMap = new HashMap<>();
         for(int i = 0; i < arr.length; i++) {
-            if (hashMap.containsKey(arr[i])) {
-                return new int[] {hashMap.get(arr[i]), i};
+            int num = arr[i];
+            int complement = target - num;
+            if (hashMap.containsKey(complement)) {
+                return new int[] {hashMap.get(complement), i};
             }
-            hashMap.put(target - arr[i], i);
+            hashMap.put(num, i);
         }
 
         return new int[] {-1, -1};

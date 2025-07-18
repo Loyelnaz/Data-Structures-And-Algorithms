@@ -1,7 +1,5 @@
 package datastructures.stacks;
 
-import java.util.Stack;
-
 /**
  * Given two strings s and t, return true if they are equal when both are typed into empty text editors.
  * '#' means a backspace character.
@@ -17,20 +15,24 @@ public class BackspaceStringCompare {
         System.out.println(backspaceCompare("ab#c", "ad#c"));
     }
 
+    /**
+     * Time Complexity - O(n)
+     * Space Complexity - O(n)
+     */
     public static boolean backspaceCompare(String s, String t) {
         return build(s).equals(build(t));
     }
 
     public static String build(String s) {
-        Stack<Character> stack = new Stack<>();
+        StringBuilder stack = new StringBuilder("");
         for (char c: s.toCharArray()) {
             if (c != BACKSPACE) {
-                stack.push(c);
-            } else if (!stack.empty()) {
-                stack.pop();
+                stack.append(c);
+            } else if (stack.length() > 0) {
+                stack.deleteCharAt(stack.length() - 1);
             }
         }
 
-        return String.valueOf(stack);
+        return stack.toString();
     }
 }

@@ -3,10 +3,14 @@ package datastructures.trees;
 import java.util.Stack;
 
 /**
+ * Given the root of a binary tree and an integer targetSum,
+ * return true if there exists a path from the root to a leaf such that
+ * the sum of the nodes on the path is equal to targetSum, and return false otherwise.
+ *
  * Leetcode - https://leetcode.com/problems/path-sum/description/
  */
 public class PathSum {
-    class Pair {
+    static class Pair {
         TreeNode node;
         int sum;
 
@@ -16,26 +20,45 @@ public class PathSum {
         }
     }
 
-    public boolean pathSum(TreeNode root, int target) {
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(1);
+        TreeNode leftChildLevelOne = new TreeNode(2);
+        TreeNode rightChildLevelOne = new TreeNode(3);
+
+        root.left = leftChildLevelOne;
+        root.right = rightChildLevelOne;
+
+        TreeNode leftChildLevelTwo = new TreeNode(4);
+        TreeNode rightChildLevelTwo = new TreeNode(5);
+
+        rightChildLevelOne.left = leftChildLevelTwo;
+        rightChildLevelOne.right = rightChildLevelTwo;
+
+        System.out.println(pathSum(root, 8));
+    }
+
+    /**
+     * Time Complexity - O(n)
+     * Space Complexity - O(n)
+     */
+    public static boolean pathSum(TreeNode root, int target) {
         return pathSum(root, target, 0);
     }
 
-    public boolean pathSum(TreeNode root, int target, int sum) {
+    public static boolean pathSum(TreeNode root, int target, int sum) {
         if (root == null) {
             return false;
         }
 
-        sum = sum + root.data;
         if (root.left == null && root.right == null) {
-            return (target == sum);
+            return (target == sum + root.data);
         }
 
-        boolean result = pathSum(root.left, target, sum);
-        if (!result) {
-            result = pathSum(root.right, target, sum);
-        }
+        sum += root.data;
+        boolean left = pathSum(root.left, target, sum);
+        boolean right = pathSum(root.right, target, sum);
 
-        return result;
+        return left || right;
     }
 
 

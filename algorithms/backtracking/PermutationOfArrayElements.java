@@ -39,6 +39,9 @@ public class PermutationOfArrayElements {
 
     private static void backtrack(List<List<Integer>> result, List<Integer> current, int[] nums) {
         if (current.size() == nums.length) {
+            // creating a copy of "curr" is important
+            // if not, reference of "curr" will be added to the list
+            // and, any further changes to the "curr", will also be reflected in the result
             result.add(new ArrayList<>(current));
             return;
         }

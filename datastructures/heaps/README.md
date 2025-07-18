@@ -53,5 +53,18 @@ A heap supports the following operations:
 * [Heap](Heap.java)
 
 ### Problems
+* [Last Stone Weight](LastStoneWeight.java)
+* [Minimum operations to halve array sum](HalveArraySum.java)
+* [Median from data stream](MedianFromDataStream.java)
+* [Remove stone to minimize total](RemoveStonesToMinimizeTotal.java)
+* [Minimum cost to connect sticks](MinimumCostToConnectSticks.java)
+
+### Top K
+* These kind of problems can be solved by sorting the array which results in O(n * logn) complexity
+* To improve this further, a heap can be used which at a given time stores on 'k' elements bringing down the complexity to O(n * logk)
+
+### Problems
 * [Find k smallest element from an array](KSmallestElement.java)
+* [Find kth largest element in a data stream](KthLargestElementInDataStream.java)
+* [Find top k frequent elements in an array](TopKFrequentElements.java)
 

@@ -20,7 +20,7 @@ public class NumberOfRecentCalls {
 
         public int ping(int t) {
             // Remove all the calls beyond the range of [t-3000, t]
-            while (!queue.isEmpty() && queue.peek() < t-3000) {
+            while (!queue.isEmpty() && queue.peek() < t - 3000) {
                 queue.poll();
             }
 

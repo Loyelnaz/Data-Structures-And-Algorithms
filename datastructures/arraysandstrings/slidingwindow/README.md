@@ -1,4 +1,12 @@
 ### Sliding Window
+####Subarray
+* A contiguous section of the array. 
+* All the elements must be adjacent to each other in the original array and in their original order.
+* SW can be applied on problems asking for valid subarray or longest subarray
+  * Find the longest subarray with a sum less than or equal to k (constraint metric = sum)
+  * Find the longest substring that has at most one "0" (constraint metric = number of zeroes)
+  * Find the number of subarrays that have a product less than k (constraint metric = product)
+
 #### Algorithm for a sliding window problem having variable window size:
 * Define a pointer for the left and right bound that represents the current window, usually both of them starting at 0.
 * Iterate over the array with the right bound to "add" elements to the window.

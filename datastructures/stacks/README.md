@@ -20,3 +20,5 @@
 
 #### Problems
 * [Valid Parentheses](ValidParentheses.java)
+* [Remove All Adjacent Duplicates](RemoveAllAdjacentDuplicatesInString.java)
+* [Backspace String Compare](BackspaceStringCompare.java)

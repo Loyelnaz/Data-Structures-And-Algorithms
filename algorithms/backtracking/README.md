@@ -2,6 +2,9 @@
 * Most common problems that can be solved with this type of algorithm is "find all possible ways to do something"
 * This is an optimization on exhaustive search
 * Meaning, abondoning (pruning) a path once it is determined that the path doesn't lead to a solution
+* Imagine if the constraint was that the string could only have vowels:
+  * An exhaustive search would still generate all `26^n` strings, and then check each one for if it only had vowels. 
+  * With backtracking, we discard all subtrees that have non-vowels, improving from `O(26^n)` to `O(5^n)`
 * This algo usually results in exponential time complexity, hence should be chosen only in the cases when the input size is small, i.e., n <= ~15
 * It is better than brute-force as we choose only the solution that matches our criteria
 
@@ -49,6 +52,9 @@ function backtrack() {
 * It is sufficient to construct just one feasible solution to solve the problem.
 
 ### Problems
-* [All possible subsets (power set) of array elements](SubsetOfArrayElements.java)
 * [All possible permutation of given array elements](PermutationOfArrayElements.java)
+* [All possible subsets (power set) of array elements](SubsetOfArrayElements.java)
+* [Combinations](Combinations.java)
 * [All paths from source to target node](AllPathsFromSourceToTarget.java)
+* [Combination Sum](CombinationSum.java)
+* [N-Queens II](NQueensTwo.java)

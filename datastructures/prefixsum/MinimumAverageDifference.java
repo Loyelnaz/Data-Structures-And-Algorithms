@@ -16,11 +16,10 @@ public class MinimumAverageDifference {
             return 0;
         }
 
-        int totalSum = 0;
-        for (int i = 0; i < nums.length; i++) {
-            totalSum += nums[i];
+        long totalSum = 0;
+        for (int num : nums) {
+            totalSum += num;
         }
-
 
         int minIndex = 0;
         long absAverage = 0, minAverage = Integer.MAX_VALUE;
@@ -30,10 +29,10 @@ public class MinimumAverageDifference {
             leftSum += nums[i];
             rightSum = totalSum - leftSum;
             long rightAverage = 0;
-            long leftAverage = leftSum / (i+1);
+            long leftAverage = leftSum / (i + 1);
 
-            if (nums.length-i-1 != 0) {
-                rightAverage = rightSum/(nums.length-i-1);
+            if (i != nums.length - 1) {
+                rightAverage = rightSum / (nums.length - i - 1);
             }
 
             absAverage = Math.abs(leftAverage - rightAverage);

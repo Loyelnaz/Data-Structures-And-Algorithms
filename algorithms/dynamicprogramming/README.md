@@ -1,5 +1,5 @@
 ## Dynamic Programming
-* Optimized Recursion
+* Optimized Recursion - breaking down an optimization problem into simpler sub-problems, and storing the solution to each sub-problem so that each sub-problem is only solved once.
 * To avoid repeated computation of state, we use **memoization** i.e., when we find an answer, we cache that using an array (if the range of the state is know) or hashmap. If we need the same state in the future, we can use it from the cache.
 
 ### When to use DP?
@@ -12,8 +12,13 @@
   * A decision could be picking between two elements
   * Decisions affecting future decisions could be something like "if you take this element, then you can't take that element in the future"
 
+### Process to solve a DP problem
+* Try to represent the problem in terms of the index
+* Perform all the possible operations on that index according to the problem statement
+* Sum up all operations (if the question say, count all possible ways) OR take minimum of all operations (if the question asks us to find minimum)
+
 ### Top Down vs Bottom Up Approach
-#### Top Down
+#### Top Down (Memoization)
 * Implemented using recursion and hash map (or array) for memoization
 * We start at the answer, and then move downwards towards the base case
 * Easy to write. It can get tricky in the case of problems involving multidimensional
@@ -35,4 +40,11 @@ where 'n' is the length of the memoization that we would be using, that is, it c
 * A recurrence relation to transition between states
 * Base case(s)
 
+### Resources
+* https://www.freecodecamp.org/news/demystifying-dynamic-programming-3efafb8d4296
+
 ### Problems
+* [Distinct ways of climbing stairs](ClimbingStairs.java)
+* [Minimum cost climbing stairs](MinimumCostClimbingStairs.java)
+* [Minimum path sum](MinimumPathSum.java)
+* [House Robber](HouseRobber.java)

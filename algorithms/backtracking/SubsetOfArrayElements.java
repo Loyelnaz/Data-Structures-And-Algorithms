@@ -25,6 +25,7 @@ public class SubsetOfArrayElements {
 
     /**
      * Time complexity - O(n.2^n)
+     * Space complexity - O(n), for the "curr" and recursive stack
      */
     public static List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();

@@ -8,7 +8,7 @@ import java.util.Stack;
  * Leetcode - https://leetcode.com/problems/maximum-depth-of-binary-tree/description/
  */
 public class MaxDepthOfTree {
-    class Pair {
+    static class Pair {
         TreeNode node;
         int depth;
 
@@ -41,10 +41,10 @@ public class MaxDepthOfTree {
             result = Math.max(result, depth);
 
             if (node.left != null) {
-                stack.add(new Pair(node.left, depth+1));
+                stack.add(new Pair(node.left, depth + 1));
             }
             if (node.right != null) {
-                stack.add(new Pair(node.right, depth+1));
+                stack.add(new Pair(node.right, depth + 1));
             }
         }
         return result;

@@ -13,6 +13,7 @@ public class NextGreaterElement {
         int[] arr = {4,2,5,7,6,9};
         int[] result = nextGreaterElement(arr);
 
+
         for (int i : result) {
             System.out.print(i + " ");
         }

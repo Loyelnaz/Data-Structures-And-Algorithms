@@ -38,13 +38,22 @@ public class Node<T> {
 }
 ````
 
+### Fast and Slow pointers
+* Two pointers moving at different speeds or any other abstract differences
+
 ### Implementation
 * [Singly Linked List](DoublyLinkedList.java)
 * [Doubly Linked List](DoublyLinkedList.java)
 
 ### Problems
 #### Singly Linked List
+* [Linked List Cycle](LinkedListCycle.java)
+* [Nth Element From End](NthElementFromEnd.java)
+* [Middle of Linked List](MiddleOfLinkedList.java)
+* [Remove Duplicates From Sorted List](RemoveDuplicatesFromSortedList.java)
 * [Reverse a linked list](ReverseLinkedList.java)
 * [Find nth element from the end of the linked list](NthElementFromEnd.java)
+* [Merge two sorted lists](MergeTwoSortedLists.java)
+
 #### Doubly Linked List
 * [Check Palindrome](PalindromeInDoublyLinkedList.java)

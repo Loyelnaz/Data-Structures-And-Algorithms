@@ -1,7 +1,6 @@
 package algorithms.greedy;
 
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * https://leetcode.com/problems/destroying-asteroids/description/

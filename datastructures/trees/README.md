@@ -10,7 +10,7 @@
 #### Leaf Node
 Node having no children
 #### Depth of a tree
-Distance from the root node. The root has a depth of zero. Every child has a depth of parentsDepth+1
+Distance from the root node. The root has a depth of zero. Every child has a depth of `parentsDepth + 1`
 
 ### Binary Tree
 * All nodes have an outdegree of at most two
@@ -41,6 +41,12 @@ public void dfs(Node node) {
     dfs(node.right);
 }
 ````
+
+#### Structure for performing a DFS
+* Handle the base case(s). Usually, an empty tree (node = null) is a base case. 
+* Do some logic for the current node 
+* Recursively call on the current node's children 
+* Return the answer
 
 ### Preorder Traversal
 * Before moving onto the children node, the logic is worked upon the current node
@@ -89,6 +95,11 @@ public void postorderDfs(Node node) {
     System.out.println(node.val);
 }
 ````
+
+The name of each traversal is describing when the current node's logic is performed:
+* Pre -> before children
+* In -> in the middle of children
+* Post -> after children
 
 ### Problems
 * [Path Sum of a binary tree](PathSum.java)

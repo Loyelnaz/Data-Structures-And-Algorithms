@@ -38,7 +38,7 @@ public class LetterCombinationOfPhoneNumber {
 
         for (int i = 0; i < keypadValue.length(); i++) {
             current.append(keypadValue.charAt(i));
-            letterCombinations(digits, index+1, result, current);
+            letterCombinations(digits, index + 1, result, current);
             current.deleteCharAt(current.length() - 1);
         }
     }

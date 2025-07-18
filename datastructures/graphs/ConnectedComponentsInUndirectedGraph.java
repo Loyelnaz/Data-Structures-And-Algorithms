@@ -23,7 +23,7 @@ public class ConnectedComponentsInUndirectedGraph {
         int componentCount = 0;
 
         for (int i = 0; i < n; i++) {
-            if (visited[i] == false) {
+            if (!visited[i]) {
                 dfs(i, visited, adjacencyList);
                 componentCount++;
             }
@@ -40,7 +40,7 @@ public class ConnectedComponentsInUndirectedGraph {
             int node = stack.pop();
 
             for (int edge : adjacencyList.get(node)) {
-                if (visited[edge] == false) {
+                if (!visited[edge]) {
                     stack.push(edge);
                     visited[edge] = true;
                 }
@@ -54,9 +54,9 @@ public class ConnectedComponentsInUndirectedGraph {
             adjacencyList.add(new ArrayList<>());
         }
 
-        for (int i = 0; i < edges.length; i++) {
-            adjacencyList.get(edges[i][0]).add(edges[i][1]);
-            adjacencyList.get(edges[i][1]).add(edges[i][0]);
+        for (int[] edge : edges) {
+            adjacencyList.get(edge[0]).add(edge[1]);
+            adjacencyList.get(edge[1]).add(edge[0]);
         }
 
         return adjacencyList;

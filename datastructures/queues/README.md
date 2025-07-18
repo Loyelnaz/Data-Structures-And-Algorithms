@@ -1,6 +1,8 @@
 ### Queue
 * Follows FIFO (First In, First Out). That means, elements are added (rear) at one end and removed (front) from the other
 * Queue can be implemented using an array, linked list or stack
+* When dynamic array is used, adding or removing an element from the front of the queue are going to be O(n)
+* We can use deque (double ended queue) which reduces the complexity to O(1)
 * Following operations are possible on stack:
     * enqueue() - Inserts element to the end of the queue
     * dequeue(item) - Removes an element from the start of the queue
@@ -27,4 +29,5 @@
 * [Queue implementation using array](QueueImplUsingArray.java)
 
 #### Problems
+* [Number of Recent Calls](NumberOfRecentCalls.java)
 * [Generate Binary Numbers from 1 to any given number N](GenerateBinaryNumbers.java)

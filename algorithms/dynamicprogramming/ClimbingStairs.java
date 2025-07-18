@@ -1,7 +1,9 @@
 package algorithms.dynamicprogramming;
 
+import java.util.Arrays;
+
 /**
- * Leetcode - https://leetcode.com/problems/climbing-stairs/description/
+ * https://leetcode.com/problems/climbing-stairs/description/
  *
  * You are climbing a staircase. It takes n steps to reach the top.
  * Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
@@ -15,15 +17,18 @@ package algorithms.dynamicprogramming;
  */
 public class ClimbingStairs {
     public static void main(String[] args) {
-        System.out.println(new Solution().climbStairs(4));
+        System.out.println("Space Optimized (Tabulation):  " + new Solution().climbStairsOptimized(5));
+        System.out.println("Memoization Solution: " + new Solution().climbStairsMemoization(5));
     }
 
     static class Solution {
+        int[] dp;
+
         /**
          * Time Complexity - O(n)
          * Space Complexity - O(1)
          */
-        public int climbStairs(int n) {
+        public int climbStairsOptimized(int n) {
             // base case is started from step 1 based on the problem constraints
             if (n == 1) {
                 return 1;
@@ -40,6 +45,36 @@ public class ClimbingStairs {
                 backTwo = temp;
             }
             return backOne;
+        }
+
+        /**
+         * Time Complexity - O(n)
+         * Space Complexity - O(n)
+         */
+        private int climbStairsMemoization(int n) {
+            dp = new int[n + 1];
+            Arrays.fill(dp, -1);
+
+            return climbStairsDpMemoization(n);
+        }
+
+        public int climbStairsDpMemoization(int n) {
+            // base case is started from step 1 based on the problem constraints
+            if (n == 1) {
+                return 1;
+            }
+
+            if (n == 2) {
+                return 2;
+            }
+
+            if (dp[n] != -1) {
+                return dp[n];
+            }
+
+            dp[n] = climbStairsDpMemoization(n - 1) + climbStairsDpMemoization(n - 2);
+
+            return dp[n];
         }
     }
 }

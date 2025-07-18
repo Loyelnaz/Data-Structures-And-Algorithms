@@ -27,13 +27,12 @@ public class RemoveStonesToMinimizeTotal {
             totalStones += stones;
         }
 
-        while (k > 0) {
-            int maxElement = heap.poll();
+        for (int i = 0; i < k; i++) {
+            int maxElement = heap.remove();
             int stonesRemoved = maxElement / 2;
             totalStones -= stonesRemoved;
 
             heap.add(maxElement - stonesRemoved);
-            k--;
         }
 
         return totalStones;

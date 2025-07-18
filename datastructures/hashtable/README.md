@@ -120,3 +120,24 @@ else:
 * No duplicate values
 * Only one null value is permitted to store
 
+### Problem Patterns
+#### Check for existence
+* An array needs O(n) to determine if an element exists or not
+* Using a hash map or a set can reduce the time complexity of the algorithm
+
+Practice
+* [Two Sum](TwoSum.java)
+* [Find Numbers](FindNumbers.java)
+* [Check Panagram](CheckPanagram.java)
+* [Counting Elements](CountingElements.java)
+
+#### Counting
+* Uses hashmap to keep track of frequency of things i.e. a key will be mapped to an integer
+
+Practice
+* [Length of longest substring containing at most "k" distinct characters](KDistinctCharacters.java)
+* [Intersection of Multiple Arrays](IntersectionOfArrays.java)
+
+#### Count the number of subarrays with an "exact" constraint
+* 
+
