@@ -1,6 +1,8 @@
 package algorithms.dynamicprogramming;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * https://leetcode.com/problems/climbing-stairs/description/
@@ -75,6 +77,23 @@ public class ClimbingStairs {
             dp[n] = climbStairsDpMemoization(n - 1) + climbStairsDpMemoization(n - 2);
 
             return dp[n];
+        }
+
+        Map<Integer, Integer> ans;
+        public int stairs(int[] cost) {
+            ans = new HashMap<>();
+            return dp(ans, cost, 0);
+        }
+
+        private int dp(Map<Integer, Integer> ans, int[] cost, int index) {
+            if (index <= 0) {
+                return 0;
+            }
+            if (ans.containsKey(index)) {
+                return ans.get(index);
+            }
+            ans.put(index, Math.min(dp(ans, cost, index - 1) + cost[index - 1], dp(ans, cost, index - 2) + cost[index - 2]));
+            return ans.get(index);
         }
     }
 }

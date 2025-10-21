@@ -44,7 +44,7 @@ where 'n' is the length of the memoization that we would be using, that is, it c
 * https://www.freecodecamp.org/news/demystifying-dynamic-programming-3efafb8d4296
 
 ### Problems
+* [House Robber](HouseRobber.java)
 * [Distinct ways of climbing stairs](ClimbingStairs.java)
 * [Minimum cost climbing stairs](MinimumCostClimbingStairs.java)
 * [Minimum path sum](MinimumPathSum.java)
-* [House Robber](HouseRobber.java)
